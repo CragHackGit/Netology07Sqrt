@@ -26,15 +26,12 @@ public class SQRServiceTest {
     void fullRange() {
         SQRService service = new SQRService();
 
-        // подготавливаем данные:
         int lowerBorder = 100;
         int upperBorder = 9801;
         int expected = 90;
 
-        // вызываем целевой метод:
         int actual = service.calcSqrtInRange(lowerBorder, upperBorder);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -42,15 +39,12 @@ public class SQRServiceTest {
     void outOfRange() {
         SQRService service = new SQRService();
 
-        // подготавливаем данные:
         int lowerBorder = -1000000;
         int upperBorder = 1000000;
         int expected = 90;
 
-        // вызываем целевой метод:
         int actual = service.calcSqrtInRange(lowerBorder, upperBorder);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -58,15 +52,12 @@ public class SQRServiceTest {
     void notInRange() {
         SQRService service = new SQRService();
 
-        // подготавливаем данные:
         int lowerBorder = 0;
         int upperBorder = 99;
         int expected = 0;
 
-        // вызываем целевой метод:
         int actual = service.calcSqrtInRange(lowerBorder, upperBorder);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 }
